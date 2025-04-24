@@ -50,6 +50,12 @@ export function SiteFooter() {
               <Link href="/products#training" className="text-gray-300 hover:text-white">
                 Training & Consultancy
               </Link>
+              <Link href="/products#agro-dealing" className="text-gray-300 hover:text-white">
+                Agro Dealing
+              </Link>
+              <Link href="/products#livestock" className="text-gray-300 hover:text-white">
+                Livestock Farming
+              </Link>
             </nav>
           </div>
 
@@ -58,7 +64,7 @@ export function SiteFooter() {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-green-400" />
-                <span className="text-gray-300">0999498162</span>
+                <span className="text-gray-300">+265 999 498 162</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-green-400" />

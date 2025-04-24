@@ -7,7 +7,11 @@ export const metadata: Metadata = {
   title: "DMT Acres - Sustainable Farming for a Thriving Future",
   description:
     "DMT Acres is a registered and dynamic farming enterprise based in Ntcheu District, Malawi, specializing in poultry farming, crop production, and organic manure manufacturing.",
-}
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RootLayout({
   children,

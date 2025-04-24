@@ -1,53 +1,7 @@
 import Image from "next/image"
 import { CheckCircle2 } from "lucide-react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-
-const TeamCard1 = ({ name, role, grade, school, major, imageSrc }: { name: string; role: string; grade: string; school: string; major: string; imageSrc: string }) => (
-  <div className="text-center max-w-sm mx-auto bg-white rounded-xl shadow-md overflow-hidden text-center p-6 space-y-3">
-    <div className="relative h-48 w-48 mx-auto rounded-full overflow-hidden mb-4 border-4 border-green-700">
-      <Image
-        src={imageSrc}
-        alt={name}
-        fill
-        className="object-cover"
-      />
-    </div>
-    
-    <div className="w-72 mx-auto"> {/* Fixed width and centered */}
-      <h3 className="text-xl font-semibold">{name}</h3>
-      <p className="text-green-700">{role}</p>
-      {grade && grade !== "null" && <p className="text-green-700">{grade}</p>}
-      {major && major !== "null" && <p className="text-green-700">{major}</p>}
-      {school && school !== "null" && <p className="text-green-700">{school}</p>}
-    </div>
-  </div>
-)
-const TeamCard = ({ name, role, grade, major, imageSrc }: { name: string; role: string; grade: string; major: string; imageSrc: string }) => (
-
-<Card className="bg-white border-green-200">
-<CardHeader className="pb-2">
-  <CardTitle className="flex items-center gap-2">
-    <div className="relative h-48 w-48 mx-auto rounded-full overflow-hidden mb-4 border-green-700">
-      <Image
-        src={imageSrc}
-        alt={name}
-        fill
-        className="object-cover"
-      />
-    </div>
-  </CardTitle>
-</CardHeader>
-<CardContent>
-  <div className="w-72 mx-auto"> {/* Fixed width and centered */}
-    <h3 className="text-xl font-semibold">{name}</h3>
-    <p className="text-green-700">{role}</p>
-    {grade && grade !== "null" && <p className="text-green-700">{grade}</p>}
-    {major && major !== "null" && <p className="text-green-700">{major}</p>}
-  </div>
-</CardContent>
-</Card>
-)
-
+import TeamSection from "@/components/team-section";
 
 export default function AboutPage() {
   return (
@@ -276,65 +230,7 @@ export default function AboutPage() {
               DMT Acres is led by a dedicated team of professionals committed to excellence in agriculture.
             </p>
           </div>
-          {/* Third Level */}
-          <h2 className="text-xl font-semibold mb-2">Executive</h2><br />
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">
-            <TeamCard 
-              name="Daniel Tsonga" 
-              role="Managing Director"
-              grade="BSc in Land Management"
-              major="(Land Surveying)"
-              imageSrc="/team/DanielTsonga.jpg" 
-              />
-            <TeamCard 
-              name="Mwayi Tsonga" 
-              role="Deputy Director"
-              grade="Masters of Business Administration"
-              major="(Strategic Marketing)"
-              imageSrc="/team/MwayiTsonga.jpg"
-              />
-          </div>
-          <br /><br />
-          <h4 className="text-xl font-semibold mb-2">Finance and Administration</h4><br />
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">
-            <TeamCard name="Sylvester Maluku" role="Administrator" grade="Bachelors of Laws (Hons) (pending)"  major={""} imageSrc="/team/sylvester-maluku.jpg" />
-            <TeamCard name="Tears Bisani" role="Human Resource Manager" grade="Diploma in Human Resource Management"  major={""} imageSrc="/team/tears-bisani.jpg" />
-            <TeamCard name="Angela Chinyama" role="Accountant" grade="Bcom in Financial Sciences"  major="(Financial Management, Accounting, Internal Auditing)" imageSrc="/team/angela-chinyama.jpg" />
-            <TeamCard name="Edward Mbesa" role="Operations Manager" grade={"Bachelor of Social Sciences (Development Studies)"}  major={"Masters of Arts in Political Science (pending)"} imageSrc="/team/edward-mbesa.jpg" />
-            <TeamCard name="Peace Msoza" role="Transport and Logistics Manager" grade="Bachelors of Science in Land Economy"  major="(Property Management and Marketing)" imageSrc="/team/peace-msoza.jpg" />
-            </div>
-          <br /><br />
-          <h4 className="text-xl font-semibold mb-2">Production and Processing Department</h4><br />
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">
-            <TeamCard name="Francisco Jonas" role="Quality Assurance Manager" grade="Bachelors of Science in Nutrition and Food Science"  major="(Human Nutrition)" imageSrc="/team/francisco-jonas.jpg" />
-            <TeamCard name="Rabson Mvula" role="Productions Manager" grade="Diploma in Community Development"  major="Certificate in Legal Studies" imageSrc="/team/rabson-mvula.jpg" />
-          </div>
-          <br /><br />
-          <h4 className="text-xl font-semibold mb-2">Environmental Department</h4><br />
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">
-            <TeamCard name="Omega Tsonga" role="Safety and Environmental Manager" grade="Bachelors of Science in Environmental Sciences"  major="Masters in Tourism and Hotel Management (pending)" imageSrc="/team/omega-tsonga.jpg" />
-          </div>
-          <br /><br />
-          <h4 className="text-xl font-semibold mb-2">Marketing Department</h4><br />
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">
-            <TeamCard name="Carol Chingwalu" role="Marketing Manager" grade="Bachelors of Business Administration"  major="(Marketing)" imageSrc="/team/carol-chingwalu.jpg" />
-            <TeamCard name="Pauline Makhalira" role="Trade Execution Manager" grade="Bachelors of Science in International Economics and Trade"  major="Bachelors of Science in Computing and Information Systems" imageSrc="/team/pauline-makhalira.jpg" />
-          </div>
-          <br /><br />
-          <h4 className="text-xl font-semibold mb-2">Research and Consultancy Unit</h4><br />
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">
-            <TeamCard name="Dr. Wisdom Malata" role="Research Consultant" grade={"PhD. Social Anthropology"}  major={"MA. Cultural Studies"} imageSrc="/team/dr-wisdom-malata.jpg" />
-            <TeamCard name="Joseph Kaphesi" role="Scientific Analyst" grade="Bachelor of Science in Natural Resources Management" major="Bachelor of Arts in Organizational Leadership and Public Relations Masters in Communication Studies (pending)" imageSrc="/team/joseph-kapesi.jpg" />
-          </div>
-          <br /><br />
-          <h4 className="text-xl font-semibold mb-2">Extension and Industrial Control System Department</h4><br />
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">
-            <TeamCard name="Freddie Oliver Kokha" role="Agriculture Manager - Crops" grade="Diploma in Agriculture and Natural Resources Management" major="Bachelors of Development Economics (pending)" imageSrc="/team/fred-oliver-kokha.jpg" />
-            <TeamCard name="Martha Kamchepera" role="Veterinary Manager" grade="Diploma in Animal Health and Production" major={""} imageSrc="/team/martha-kamchepera.jpg" />
-            <TeamCard name="Chikondi Lifa" role="Agro-Spatial Analyst" grade="BSc in Land Management"  major={"(Land Surveying)"} imageSrc="/team/chikondi-lifa.jpg" />
-            <TeamCard name="Louis Makhiringa" role="Irrigation Engineer" grade={"Bachelor of Science in Irrigation Engineering"}  major={""} imageSrc="/team/louis-makhiringa.jpg" />
-            <TeamCard name="Chipiliro Chingwembere" role="Farm Manager" grade={"Malawi School Certficate of Education"}  major={""} imageSrc="/team/chipiliro-chigwembere.jpg" />
-          </div>
+          <TeamSection />
         </div>
       </section>
     </div>

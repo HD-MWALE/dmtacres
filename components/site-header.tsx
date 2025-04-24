@@ -37,6 +37,7 @@ export function SiteHeader() {
   const links = [
     { path: "/", label: "Home" },
     { path: "/about", label: "About Us" },
+    { path: "/team", label: "Our Team" },
     { path: "/products", label: "Products & Services" },
     { path: "/gallery", label: "Gallery" },
     { path: "/contact", label: "Contact" },
