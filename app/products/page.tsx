@@ -4,6 +4,37 @@ import { ArrowRight, CheckCircle } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const metadataBase = new URL("https://dmtacres.com");
+
+  return {
+    metadataBase,
+    title: "Products & Services",
+    description:
+      "Discover our range of high-quality agricultural products and services",
+    openGraph: {
+      title: "Products & Services",
+      description:
+        "Discover our range of high-quality agricultural products and services",
+      url: "https://dmtacres.com/products",
+      type: "website",
+      images: [
+        {
+          url: "https://dmtacres.com/images/chicken3.jpg",
+          width: 600,
+          height: 400,
+          alt: "Products & Services",
+        },
+      ],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 export default function ProductsPage() {
   return (

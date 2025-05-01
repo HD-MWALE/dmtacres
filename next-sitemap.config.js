@@ -2,6 +2,7 @@ module.exports = {
   siteUrl: 'https://dmtacres.com',
   generateRobotsTxt: true,
   exclude: ['/404'],
+  outDir: './public',
 
   additionalPaths: async () => {
     const members = [

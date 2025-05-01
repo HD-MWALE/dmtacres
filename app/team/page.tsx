@@ -1,7 +1,69 @@
 import Image from "next/image"
 import TeamSection from "@/components/team-section";
+import type { Metadata } from "next";
+import Script from "next/script";
+import { teamData } from "@/data/team";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const metadataBase = new URL("https://dmtacres.com");
+  const structuredData = generateTeamSchema();
+
+  return {
+    metadataBase,
+    structuredData,
+    title: "Meet the DMT Acres Team",
+    description:
+      "Get to know the passionate and skilled professionals driving sustainable agriculture at DMT Acres.",
+    openGraph: {
+      title: "Meet the DMT Acres Team",
+      description:
+        "Explore the profiles of our dedicated team working in poultry farming, crop production, and organic manure innovation.",
+      url: "https://dmtacres.com/team",
+      type: "website",
+      images: [
+        {
+          url: "https://dmtacres.com/images/banner.jpg",
+          width: 1200,
+          height: 630,
+          alt: "DMT Acres Team",
+        },
+      ],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
+
+const generateTeamSchema = () => {
+  const employees = teamData.flatMap((department) =>
+    department.members.map((member) => ({
+      "@type": "Person",
+      name: member.name,
+      jobTitle: member.role,
+      url: `https://dmtacres.com/team/${member.name.toLowerCase().replace(/\s+/g, "-")}`,
+      image: `https://dmtacres.com${member.imageSrc}`,
+      email: member.isEmail ? member.email : undefined,
+    }))
+  );
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "DMT Acres",
+    url: "https://dmtacres.com",
+    logo: "https://dmtacres.com/logo/dmt_acres_logo_white_background.png",
+    sameAs: [
+      "https://www.linkedin.com/company/dmtacres",
+      "https://twitter.com/dmtacres",
+    ],
+    employee: employees,
+  };
+};
 
 export default function TeamPage() {
+
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero Section */}

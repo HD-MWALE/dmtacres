@@ -19,7 +19,7 @@ export const TeamCard = ({
   <Card className="bg-white border-green-200 shadow-md transition hover:shadow-lg w-80">
     <CardHeader className="pb-2">
       <CardTitle className="flex justify-center">
-        <div className="relative h-48 w-48 rounded-full overflow-hidden border-4 border-green-700">
+        <div className="relative h-48 w-48 rounded-full overflow-hidden border-0 border-green-700">
           <Image
             src={imageSrc}
             alt={name}

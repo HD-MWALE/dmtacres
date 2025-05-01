@@ -28,7 +28,7 @@ export const teamData: TeamDepartment[] = [
       },
       {
         name: "Mwayi Tsonga",
-        email: "daniel.tsonga@dmtacres.com",
+        email: "mwayi.tsonga@dmtacres.com",
         isEmail: true,
         role: "Deputy Director",
         grade: "Masters of Business Administration",
@@ -40,7 +40,7 @@ export const teamData: TeamDepartment[] = [
   {
     title: "Finance and Administration",
     members: [
-      { name: "Sylvester Maluku", email: "daniel.tsonga@dmtacres.com", isEmail: true, role: "Administrator", grade: "Bachelors of Laws (Hons) (pending)", major: "", imageSrc: "/team/sylvester-maluku.jpg" },
+      { name: "Sylvester Maluku", email: "sylvester.maluku@dmtacres.com", isEmail: true, role: "Administrator", grade: "Bachelors of Laws (Hons) (pending)", major: "", imageSrc: "/team/sylvester-maluku.jpg" },
       { name: "Tears Bisani", email: "tears.bisani@dmtacres.com", isEmail: false, role: "Human Resource Manager", grade: "Diploma in Human Resource Management", major: "", imageSrc: "/team/tears-bisani.jpg" },
       { name: "Angela Chinyama", email: "angela.chinyama@dmtacres.com", isEmail: true, role: "Accountant", grade: "Bcom in Financial Sciences", major: "(Financial Management, Accounting, Internal Auditing)", imageSrc: "/team/angela-chinyama.jpg" },
       { name: "Edward Mbesa", email: "edward-mbesa@dmtacres.com", isEmail: true, role: "Operations Manager", grade: "Bachelor of Social Sciences (Development Studies)", major: "Masters of Arts in Political Science (pending)", imageSrc: "/team/edward-mbesa.jpg" },
@@ -79,9 +79,9 @@ export const teamData: TeamDepartment[] = [
     members: [
       { name: "Freddie Oliver Kokha", email: "freddie.kokha@dmtacres.com", isEmail: true, role: "Agriculture Manager - Crops", grade: "Diploma in Agriculture and Natural Resources Management", major: "Bachelors of Development Economics (pending)", imageSrc: "/team/fred-oliver-kokha.jpg" },
       { name: "Martha Kamchepera", email: "martha.kamchepera@dmtacres.com", isEmail: false, role: "Veterinary Manager", grade: "Diploma in Animal Health and Production", major: "", imageSrc: "/team/martha-kamchepera.jpg" },
-      { name: "Chikondi Lifa", email: "chikondi-lifa@dmtacres.com", isEmail: true, role: "Agro-Spatial Analyst", grade: "BSc in Land Management", major: "(Land Surveying)", imageSrc: "/team/chikondi-lifa.jpg" },
-      { name: "Louis Makhiringa", email: "louis-makhiringa@dmtacres.com", isEmail: false, role: "Irrigation Engineer", grade: "Bachelor of Science in Irrigation Engineering", major: "", imageSrc: "/team/louis-makhiringa.jpg" },
-      { name: "Chipiliro Chingwembere", email: "chipiliro-chigwembere@dmtacres.com", isEmail: false, role: "Farm Manager", grade: "Malawi School Certficate of Education", major: "", imageSrc: "/team/chipiliro-chigwembere.jpg" },
+      { name: "Chikondi Lifa", email: "chikondi.lifa@dmtacres.com", isEmail: true, role: "Agro-Spatial Analyst", grade: "BSc in Land Management", major: "(Land Surveying)", imageSrc: "/team/chikondi-lifa.jpg" },
+      { name: "Louis Makhiringa", email: "louis.makhiringa@dmtacres.com", isEmail: false, role: "Irrigation Engineer", grade: "Bachelor of Science in Irrigation Engineering", major: "", imageSrc: "/team/louis-makhiringa.jpg" },
+      { name: "Chipiliro Chingwembere", email: "chipiliro.chigwembere@dmtacres.com", isEmail: false, role: "Farm Manager", grade: "Malawi School Certficate of Education", major: "", imageSrc: "/team/chipiliro-chigwembere.jpg" },
     ],
   },
 ];

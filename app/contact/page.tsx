@@ -7,6 +7,37 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Facebook, Instagram } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+// import type { Metadata } from "next";
+// 
+// export async function generateMetadata(): Promise<Metadata> {
+//   const metadataBase = new URL("https://dmtacres.com");
+
+//   return {
+//     metadataBase,
+//     title: "Contact Us",
+//     description:
+//       "We welcome partnerships, investment opportunities, and collaborations to further our vision of agricultural growth and food security.",
+//     openGraph: {
+//       title: "Contact Us",
+//       description:
+//         "We welcome partnerships, investment opportunities, and collaborations to further our vision of agricultural growth and food security.",
+//       url: "https://dmtacres.com/contact",
+//       type: "website",
+//       images: [
+//         {
+//           url: "https://dmtacres.com/images/banner.jpg",
+//           width: 1200,
+//           height: 630,
+//           alt: "Contact Us",
+//         },
+//       ],
+//     },
+//     robots: {
+//       index: true,
+//       follow: true,
+//     },
+//   };
+// }
 
 export default function ContactPage() {
   // Call useToast hook here inside the functional component
@@ -81,7 +112,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-semibold">Follow Us</h3>
                 <div className="flex items-center gap-4">
                   <a
-                    href="#"
+                    href="https://web.facebook.com/profile.php?id=61574754666450"
                     className="h-12 w-12 rounded-full bg-green-100 flex items-center justify-center hover:bg-green-200 transition-colors"
                   >
                     <Facebook className="h-6 w-6 text-green-700" />

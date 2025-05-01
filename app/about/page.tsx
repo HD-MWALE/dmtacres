@@ -2,6 +2,181 @@ import Image from "next/image"
 import { CheckCircle2 } from "lucide-react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import TeamSection from "@/components/team-section";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const metadataBase = new URL("https://dmtacres.com");
+
+  return {
+    metadataBase,
+    title: "About DMT Acres",
+    description:
+      "DMT Acres is a registered and dynamic farming enterprise based in Ntcheu and Kasungu Districts, Malawi. Founded in 2019, this agriculture farming enterprise was officially registered in April 2024, specializing in poultry farming, crop production and organic fertilizer manufacturing.",
+    openGraph: {
+      title: "About DMT Acres",
+      description:
+        "Our operations are guided by a passion for food security, environmental sustainability and economic empowerment. Our focus is on cultivating high-quality crops and livestock while implementing innovative and eco-friendly farming techniques.",
+      url: "https://dmtacres.com/about",
+      type: "website",
+      images: [
+        {
+          url: "https://dmtacres.com/images/banner.jpg",
+          width: 1200,
+          height: 630,
+          alt: "About DMT Acres"
+        },
+        {
+          url: "https://dmtacres.com/images/chicken1.jpg",
+          width: 400,
+          height: 300,
+          alt: "Poultry Farm"
+        },
+        {
+          url: "https://dmtacres.com/images/chicken2.jpg",
+          width: 400,
+          height: 300,
+          alt: "Poultry Farm"
+        },
+        {
+          url: "https://dmtacres.com/images/chicken3.jpg",
+          width: 400,
+          height: 300,
+          alt: "Poultry Farm"
+        },
+        {
+          url: "https://dmtacres.com/images/chicken4.jpg",
+          width: 400,
+          height: 300,
+          alt: "Poultry Farm"
+        },
+        {
+          url: "https://dmtacres.com/images/chicken5.jpg",
+          width: 400,
+          height: 300,
+          alt: "Poultry Farm"
+        },
+        {
+          url: "https://dmtacres.com/images/chicken6.jpg",
+          width: 400,
+          height: 300,
+          alt: "Poultry Farm"
+        },
+        {
+          url: "https://dmtacres.com/images/maize.jpg",
+          width: 400,
+          height: 300,
+          alt: "Maize Field"
+        },
+        {
+          url: "https://dmtacres.com/images/maize3.jpg",
+          width: 400,
+          height: 300,
+          alt: "Maize Field"
+        },
+        {
+          url: "https://dmtacres.com/images/maize2.jpg",
+          width: 400,
+          height: 300,
+          alt: "Farm Workers"
+        },
+        {
+          url: "https://dmtacres.com/images/banana1.jpg",
+          width: 400,
+          height: 300,
+          alt: "Banana Field"
+        },
+        {
+          url: "https://dmtacres.com/images/banana2.jpg",
+          width: 400,
+          height: 300,
+          alt: "Banana Field"
+        },
+        {
+          url: "https://dmtacres.com/images/banana3.jpg",
+          width: 400,
+          height: 300,
+          alt: "Banana Field"
+        },
+        {
+          url: "https://dmtacres.com/images/banana4.jpg",
+          width: 400,
+          height: 300,
+          alt: "Banana Field"
+        },
+        {
+          url: "https://dmtacres.com/images/irrigation.jpg",
+          width: 400,
+          height: 300,
+          alt: "Irrigation"
+        },
+        {
+          url: "https://dmtacres.com/images/organic.jpg",
+          width: 400,
+          height: 300,
+          alt: "Organic Fertilizer"
+        },
+        {
+          url: "https://dmtacres.com/images/organic2.jpg",
+          width: 400,
+          height: 300,
+          alt: "Organic Fertilizer"
+        },
+        {
+          url: "https://dmtacres.com/images/organic3.jpg",
+          width: 400,
+          height: 300,
+          alt: "Organic Fertilizer"
+        },
+        {
+          url: "https://dmtacres.com/images/organic4.jpg",
+          width: 400,
+          height: 300,
+          alt: "Organic Fertilizer"
+        },
+        {
+          url: "https://dmtacres.com/images/organic5.jpg",
+          width: 400,
+          height: 300,
+          alt: "Organic Fertilizer"
+        },
+        {
+          url: "https://dmtacres.com/images/organic6.jpg",
+          width: 400,
+          height: 300,
+          alt: "Organic Fertilizer"
+        },
+        {
+          url: "https://dmtacres.com/images/organic7.jpg",
+          width: 400,
+          height: 300,
+          alt: "Organic Fertilizer"
+        },
+        {
+          url: "https://dmtacres.com/images/cattle.jpg",
+          width: 400,
+          height: 300,
+          alt: "Cattle Farming"
+        },
+        {
+          url: "https://dmtacres.com/images/cattle1.jpg",
+          width: 400,
+          height: 300,
+          alt: "Cattle Farming"
+        },
+        {
+          url: "https://dmtacres.com/images/cattle3.jpg",
+          width: 400,
+          height: 300,
+          alt: "Cattle Farming"
+        }
+      ]
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 export default function AboutPage() {
   return (
